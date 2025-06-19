@@ -1,10 +1,7 @@
-//Variables in JS 
+//Creating a functio for adding 2 numbers 
 
-//using let for varibales 
-let name = "ram"; 
+function sum(p1,p2){
+    return p1+p2; 
+}
 
-//using const for constants
-const PIE = 3.14; 
-
-console.log(name); 
-console.log(PIE); 
+console.log(sum(2,3)); 

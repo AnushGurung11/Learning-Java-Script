@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class6</title>
+</head>
+<body>
+
+
+
+
+    <!-- Creating a form for Taking the user input -->
+    <form action="#" onsubmit="return false">
+
+        <!-- Text filed for user input -->
+        <input type="text" name="Number" id="num" placeholder="Enter any number to get the Serial number">
+
+        <!-- Button for submitting the values -->
+        <button type="submit" onclick="myFunctio()">Send</button>
+    </form>
+
+    <div id="loop"></div>
+
+    <script>
+        //function called on click
+
+        function myFunctio(){
+            let number = Number(document.getElementById("num").value);
+
+            let text = ""; 
+            for(let a = 1; a<= number ; a++){
+                text += a + "<br>"; 
+            }
+
+            return document.getElementById("loop").innerHTML = text; 
+        }
+
+
+    </script>
+
+    
+</body>
+</html>

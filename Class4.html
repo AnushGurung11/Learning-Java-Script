@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class4 </title>
+</head>
+<body>
+
+    <!-- Creating a Simple form For taking basic input form the user -->
+    <form action="#"> 
+
+        <!--A text filed for entering the number-->
+        <input type="text" placeholder="Enter any number" id="demo1">
+
+        <!-- Creating a submit button to initialize the function -->
+        <button type="submit" onclick="myFunction()">submit</button>
+    </form>
+   
+    <!-- Creating an empty field for the output -->
+    <div id="demo"></div>
+
+    <!-- All the js are here -->
+    <script>
+
+        // Function performed onclick action 
+        function myFunction(){
+
+            //String the user input inside a variable 
+            //here the element is takes using the elements id 
+            //The value is taken 
+            // Converted into Number
+            let num = Number(document.getElementById("demo1").value);
+
+            //Adding condition to to the user given value
+            if (num === 10){
+                document.getElementById("demo").innerHTML = "<h1> You got 10</h1>"; 
+
+            }else{
+                document.getElementById("demo").innerHTML = "<h1> Just take more man.</h1>"
+            }
+        }
+        
+    </script>
+</body>
+</html>

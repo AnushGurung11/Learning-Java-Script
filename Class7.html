@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrom</title>
+</head>
+<body>
+    <!-- 
+    Here we are going to take user input as a text and giving the word opposite in letters
+    Basically checking if its palindrom or not
+    -->
+
+    <form action="" onsubmit="return false">
+        <!-- Creating a text input  -->
+
+        <input type="text" name="user input" id="user" placeholder="Enter any word">
+        <button type="submit" onclick="myFunction()">Send</button>
+        
+    </form>
+
+    <div id="demo"></div>
+    <script>
+        //No on click of the sumbit button we are going to give the user the opposite word and output as palindrom or not
+
+        //Creating a function for the logic
+
+        function myFunction(){
+
+            let value = String(document.getElementById("user").value);
+            let reverse=''; 
+
+            let text= '';
+
+            //Now looping through the given string
+
+            for(let a = value.length-1;a>=0;a--)  {
+                let temp = value[a]; 
+                reverse+=temp; 
+            }
+
+            //Checking the condition for the palindrom
+            
+            if(reverse.toLocaleLowerCase() == value.toLocaleLowerCase()){
+                text+= "<h1>The word is Plaindrom</h1>"
+            }else{
+                text+= "<h1>The word is not palindrom</h1>"
+            }
+
+            document.getElementById("demo").innerHTML = text;
+
+
+
+        }
+
+
+    </script>
+</body>
+</html>

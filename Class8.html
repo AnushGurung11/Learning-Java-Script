@@ -120,6 +120,26 @@
             console.log(bed);
 
 
+            //Creating an Object of the user 
+            const user =
+             {
+                name : fname +""+ lname,
+                phone : phone, 
+                gender : gender, 
+                location : location, 
+                bed_number : bed
+            }
+
+            console.log(user.name); 
+
+             const jsonString = JSON.stringify(user, null, 2); // null, 2 for pretty-printing
+             console.log (jsonString); 
+
+
+
+            
+
+
         }
     </script>
 </body>

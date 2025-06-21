@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Simple Form</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        *{
+            font-family: serif;
+        }
+        .header{
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+            font-size: larger;
+        
+        }
+
+        .body{
+            display: flex;
+            align-items: center;
+            margin: 50px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        p{
+            margin: 20px;
+            font-size: large;
+        }
+
+        #submit{
+            border-radius: 10px;
+            padding: 10px;
+            background-color: #ADD8E6;
+            font-size:large;
+            font-weight: 500;
+        }
+        #submit:hover{
+            background-color: #63a1b6;
+
+        }
+        #radio-button{
+            gap: 10px;
+        }
+
+
+
+   </style>
+</head>
+<body>
+    <!-- This will Contain all the Header Part of the page -->
+
+    <div class="header">
+        <header><h1>Oracle</h1></header>
+        <hr>
+    </div>
+    
+    <!-- This will contain the body part of the webpage -->
+    <div class="body">
+
+        <!-- wrapping the form -->
+
+        <form action="" onsubmit="return false">
+            <!-- Now adding the necessary elements in the form -->
+            
+            
+           
+            <p>First Name: <input type="text" name="Firstname" id="fname"></p>
+            <p>Last Name: <input type="text" name="Lastname" id="lname"></p>
+            <p>Phone number: <input type="text" name="Phone number" id="phone"></p>
+            <p>Gender: <input type="radio" name="Gender"  value="Male">Male <input type="radio" name="Gender"  value="female">Female</p>
+
+            <!-- Creating a drop down for the location of the room  -->
+            <p> 
+                <label for="Location">Location: </label>
+                <select name="Location" id="location">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+            </p>
+
+            <!-- Creating a drop down for the bed number -->
+
+            <p>
+                <label for="bed-number">Bed Number:</label>
+                <select name="bed-number" id="bed-number">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </p>
+
+            <input type="submit" onclick="submittion()" id="submit">
+
+        </form>
+    </div>
+
+
+    <!-- Internal JS for adding functionality in the webiste -->
+    <script>
+        function submittion(){
+            let fname = String(document.getElementById("fname").value);
+            let lname = String(document.getElementById("lname").value);
+            let phone = String(document.getElementById("phone").value);
+            let gender = document.querySelector('input[name="Gender"]:checked')?.value;
+            let location = String(document.getElementById("location").value);
+            let bed = document.getElementById("bed-number").value;
+
+            console.log(fname);
+            console.log(lname);
+            console.log(phone);
+            console.log(gender);
+            console.log(location);
+            console.log(bed);
+
+
+        }
+    </script>
+</body>
+</html>

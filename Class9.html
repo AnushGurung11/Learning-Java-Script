@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in JS</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            font-size: larger;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        form{
+            display: flex;
+            gap: 10px;
+            margin:10px;
+        }
+
+        #user_input{
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Here today we are going to learn about the array in JS and its Implications -->
+    
+    <!-- Creating an input field for inserting value which will be stored inside an array -->
+    
+    <!-- form for the user input -->
+    <form action="" onclick="return false">
+        <label for="user-input">Input: </label>
+        <input type="text" name="input" id="user_input">
+        <input type="submit" value="submit" onclick="myfunction()">
+        <input type="submit" value="check" onclick="check()">
+    </form><br>
+    
+
+    <p id="demo"></p>
+
+    <script>
+        const arr = [];
+        function myfunction(){
+
+
+            //This function will take the input from the text field and add the items in array
+            let value = String(document.getElementById("user_input").value);
+            arr.push(value); 
+            
+        }
+
+        function check(){
+
+            for(let a = 0; a<=arr.length;a++){
+
+                document.getElementById("demo").innerHTML = arr.join(","); 
+
+            }
+
+             
+        }
+
+
+    </script>
+</body>
+</html>

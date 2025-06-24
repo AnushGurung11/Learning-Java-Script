@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array and its manipulation</title>
+</head>
+<body>
+    <!-- Manipulation with the array list and it's values -->
+
+    <script>
+        // This will contain the function which can be used to manipulate the array in js
+
+        //List of methods which can be used in arry of JS are 
+
+        // length 
+        // pop 
+        // push 
+        // sort 
+        // sorted 
+        // reverse 
+        // reversed 
+        // delete 
+        // concat 
+        // flat 
+        // splice 
+        // spliced 
+        // slice 
+        // shift  
+        // join 
+        // to string 
+        // unshift 
+        // index of 
+
+
+        const arr = new Array(5,2,3,6,1);
+        console.log(arr.length); 
+
+        //Here arr2 variable is pointing in arr which means all the changes in arr2 will affect arr src array 
+        const arr2 = arr ; 
+        console.log(arr2.pop()); 
+        
+        console.log(arr);
+        
+        //For getting the number in assending order
+        //Internal function is used becasue sort will only look at the first digit of the number
+        console.log(arr2.sort(function(a,b){return a-b})); 
+
+
+        const list = new Array("a","b","c","d","e","z","f","i",",q"); 
+        
+
+    </script>
+    
+</body>
+</html>
